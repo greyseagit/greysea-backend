@@ -880,6 +880,38 @@ export interface ApiProjectProject extends Schema.CollectionType {
   };
 }
 
+export interface ApiReviewReview extends Schema.CollectionType {
+  collectionName: 'reviews';
+  info: {
+    singularName: 'review';
+    pluralName: 'reviews';
+    displayName: 'Reviews';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Review: Attribute.RichText;
+    Company: Attribute.String;
+    Category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::review.review',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::review.review',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiServiceService extends Schema.CollectionType {
   collectionName: 'services';
   info: {
@@ -932,6 +964,7 @@ declare module '@strapi/types' {
       'api::general-content.general-content': ApiGeneralContentGeneralContent;
       'api::logo.logo': ApiLogoLogo;
       'api::project.project': ApiProjectProject;
+      'api::review.review': ApiReviewReview;
       'api::service.service': ApiServiceService;
     }
   }
