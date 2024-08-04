@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "marichka-tanechnyk",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -11,10 +11,10 @@
     "deploy": "strapi deploy"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "4.25.6",
-    "@strapi/plugin-i18n": "4.25.6",
-    "@strapi/plugin-users-permissions": "4.25.6",
-    "@strapi/strapi": "4.25.6",
+    "@strapi/plugin-cloud": "4.25.5",
+    "@strapi/plugin-i18n": "4.25.5",
+    "@strapi/plugin-users-permissions": "4.25.5",
+    "@strapi/strapi": "4.25.5",
     "better-sqlite3": "8.6.0",
     "pg": "^8.12.0",
     "pg-connection-string": "^2.6.4",
@@ -27,11 +27,11 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "bf37e4c9-7c34-4583-b077-04f8f7b86623"
+    "uuid": "ec75ab32-ee4d-4289-8151-082fcaf7aca7"
   },
   "engines": {
-    "node": "18.x",
-    "npm": "9.x"
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
   },
   "license": "MIT"
 }

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "general_contents",
+  "info": {
+    "singularName": "general-content",
+    "pluralName": "general-contents",
+    "displayName": "general-content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "instagram_link": {
+      "type": "string"
+    },
+    "twitter_link": {
+      "type": "string"
+    },
+    "youtube_link": {
+      "type": "string"
+    }
+  }
+}
