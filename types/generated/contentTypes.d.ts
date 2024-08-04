@@ -794,14 +794,15 @@ export interface ApiGeneralContentGeneralContent extends Schema.CollectionType {
     singularName: 'general-content';
     pluralName: 'general-contents';
     displayName: 'general-content';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     instagram_link: Attribute.String;
-    twitter_link: Attribute.String;
-    youtube_link: Attribute.String;
+    linkedin_link: Attribute.String;
+    vimeo_link: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

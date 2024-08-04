@@ -4,7 +4,8 @@
   "info": {
     "singularName": "general-content",
     "pluralName": "general-contents",
-    "displayName": "general-content"
+    "displayName": "general-content",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,10 +15,10 @@
     "instagram_link": {
       "type": "string"
     },
-    "twitter_link": {
+    "linkedin_link": {
       "type": "string"
     },
-    "youtube_link": {
+    "vimeo_link": {
       "type": "string"
     }
   }
