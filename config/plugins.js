@@ -1,5 +1,4 @@
 module.exports = ({ env }) => ({
-    // ...
     upload: {
       config: {
         provider: 'cloudinary',
@@ -15,5 +14,8 @@ module.exports = ({ env }) => ({
         },
       },
     },
-    // ...
+    init: (config) => {
+      console.log('Cloudinary config:', config);
+      return config;
+    },
   });
