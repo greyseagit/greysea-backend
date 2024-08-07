@@ -15,6 +15,8 @@ module.exports = [
             'market-assets.strapi.io',
             'res.cloudinary.com',
           ],
+          'frame-src': ["'self'", 'res.cloudinary.com'], // Додаємо frame-src для Cloudinary
+          'sandbox': ['allow-scripts', 'allow-same-origin'], // Додаємо sandbox директиву
           upgradeInsecureRequests: null,
         },
       },
