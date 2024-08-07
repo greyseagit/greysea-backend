@@ -16,7 +16,7 @@ module.exports = [
             'res.cloudinary.com',
           ],
           'frame-src': ["'self'", 'res.cloudinary.com'], // Додаємо frame-src для Cloudinary
-          'sandbox': ['allow-scripts', 'allow-same-origin'], // Додаємо sandbox директиву
+          'sandbox': ['allow-forms', 'allow-same-origin', 'allow-scripts'],
           upgradeInsecureRequests: null,
         },
       },
