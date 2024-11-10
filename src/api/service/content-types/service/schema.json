@@ -4,7 +4,8 @@
   "info": {
     "singularName": "service",
     "pluralName": "services",
-    "displayName": "services"
+    "displayName": "services",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,37 @@
     },
     "description": {
       "type": "text"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description_left": {
+      "type": "text"
+    },
+    "description_right": {
+      "type": "text"
+    },
+    "video_thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "video_iframe_url": {
+      "type": "string"
     }
   }
 }
