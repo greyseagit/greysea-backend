@@ -863,6 +863,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     video_url: Attribute.String;
     video_thumbnail: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     video_iframe_url: Attribute.String;
+    rank: Attribute.Integer & Attribute.DefaultTo<1>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -887,6 +888,7 @@ export interface ApiReviewReview extends Schema.CollectionType {
     singularName: 'review';
     pluralName: 'reviews';
     displayName: 'Reviews';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -895,6 +897,7 @@ export interface ApiReviewReview extends Schema.CollectionType {
     Review: Attribute.RichText;
     Company: Attribute.String;
     Category: Attribute.String;
+    link: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

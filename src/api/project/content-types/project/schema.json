@@ -51,6 +51,10 @@
     },
     "video_iframe_url": {
       "type": "string"
+    },
+    "rank": {
+      "type": "integer",
+      "default": 1
     }
   }
 }
