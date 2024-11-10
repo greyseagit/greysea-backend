@@ -48,6 +48,9 @@
     },
     "video_iframe_url": {
       "type": "string"
+    },
+    "tags": {
+      "type": "text"
     }
   }
 }

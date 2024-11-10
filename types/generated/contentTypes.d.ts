@@ -932,6 +932,7 @@ export interface ApiServiceService extends Schema.CollectionType {
     description_right: Attribute.Text;
     video_thumbnail: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     video_iframe_url: Attribute.String;
+    tags: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
