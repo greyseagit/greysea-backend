@@ -864,6 +864,11 @@ export interface ApiProjectProject extends Schema.CollectionType {
     video_thumbnail: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     video_iframe_url: Attribute.String;
     rank: Attribute.Integer & Attribute.DefaultTo<1>;
+    project_categories: Attribute.Relation<
+      'api::project.project',
+      'manyToMany',
+      'api::project-category.project-category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -875,6 +880,42 @@ export interface ApiProjectProject extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::project.project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProjectCategoryProjectCategory
+  extends Schema.CollectionType {
+  collectionName: 'project_categories';
+  info: {
+    singularName: 'project-category';
+    pluralName: 'project-categories';
+    displayName: ' Project Category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    projects: Attribute.Relation<
+      'api::project-category.project-category',
+      'manyToMany',
+      'api::project.project'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::project-category.project-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::project-category.project-category',
       'oneToOne',
       'admin::user'
     > &
@@ -975,6 +1016,7 @@ declare module '@strapi/types' {
       'api::general-content.general-content': ApiGeneralContentGeneralContent;
       'api::logo.logo': ApiLogoLogo;
       'api::project.project': ApiProjectProject;
+      'api::project-category.project-category': ApiProjectCategoryProjectCategory;
       'api::review.review': ApiReviewReview;
       'api::service.service': ApiServiceService;
     }
